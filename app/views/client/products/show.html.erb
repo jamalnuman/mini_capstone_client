@@ -1,8 +1,17 @@
-<a href="/product/products">Home</a>
+<!-- <a href="/client/products">Home</a> -->
 
 <h2><%= @product["name"] %></h2>
 <h2><%= @product["description"] %></h2>
 <h2><%= @product["price"] %></h2>
+
+<a href="/client/products/<%= @product["id"] %>/edit">Edit</a>
+
+<%= form_tag "/client/products/#{@product["id"]}", method: :delete do %>
+    <input type="submit" value="Delete">
+   <% end %>
+
+
+
 
 
 

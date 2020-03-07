@@ -1,6 +1,6 @@
-<%= form_tag "/client/products", method: :post do %> 
+<%= form_tag "/client/products", method: :post do %> <!-- This is rails method to provide a secure way of sending form data such as credit cards etc -->
   <div>
-    Name: <input type="text" name="name">
+    Name: <input type="text" name="name"> <!-- These are the names of the params key, and are sent to the create action in the controller..cause new and create work together on this without a backend   -->
   </div>
   <div>
     Description: <input type="text" name="description">
@@ -9,6 +9,6 @@
     Price: <input type="text" name="price">
   </div>
   
-  <input type="submit" value="Create Product!">
+  <input type="submit" value="Create Product!"> <!-- the submit button is needed for the new/create actions -->
 <!-- </form> -->
 <% end %>

@@ -1,0 +1,15 @@
+<h1>Product Edit Form</h1>
+<%= form_tag "/client/products/#{ @product["id"]}", method: :patch do %> <!-- This is rails method to provide a secure way of sending form data such as credit cards etc -->
+  <div>
+    Name: <input type="text" name="name" value="<%= @product["name"] %>" > <!-- These are the names of the params key, and are sent to the create action in the controller..cause new and create work together on this without a backend   -->
+  </div>
+  <div>
+    Description: <input type="text" name="description" value="<%= @product["description"] %>">
+  </div>
+  <div>
+    Price: <input type="text" name="price" value="<%= @product["price"] %>">
+  </div>
+  
+  <input type="submit" value="Update Product!"> <!-- the submit button is needed for the new/create actions -->
+<!-- </form> -->
+<% end %>
